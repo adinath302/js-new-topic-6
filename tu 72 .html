@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> local and globle scope & hoisting in javascript </title>
+    <style>
+        body {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // * local and globle scope 
+
+        var a = 4;  // var is a globle level variable 
+        function greet() {
+            let a = 5;  // let is a block level variable
+            console.log("this is decleared in the block variable : " + a);
+        }
+        greet()
+        console.log("this is the outside the box variable : "+a);
+
+        // * hoisting 
+        // following two lines will run succesfully due to javascript hoisting
+
+        // output is "undefined"
+        // console.log(a);
+        // var a = 1;  // Declaration hoisted to the top but initialization is not
+        // let a = 1 ;  // it will not work
+        // const a = 1 ;  // it will not work
+        // console.log(a);
+
+        // greet()
+        // var greet = function () {
+        //     console.log('good morning');
+        // }
+
+    </script>
+</body>
+
+</html>
